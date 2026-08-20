@@ -31,19 +31,22 @@ ollama --version
 
 # Run Qwen 2.5 3B model locally
 ollama run qwen2.5:3b
-
+```
 ### Phase 1 API Verification
-
 **Testing Local REST API via cURL:**
+```bash
+
 curl http://localhost:11434/api/generate -d '{
   "model": "qwen2.5:3b",
   "prompt": "Summarize the concept of Open-Source software in 2 sentences.",
   "stream": false
 }'
-
+```
 **Building & Testing Custom Sovereign Modelfile: **
+```bash
 # Create custom model from Modelfile configuration
 ollama create enterprise-assistant -f ./Modelfile
 
 # Execute interactive test session with system rules applied
 ollama run enterprise-assistant "What are your operational rules?"
+```
