@@ -1,0 +1,16 @@
+# Python environments & cache
+__pycache__/
+*.py[cod]
+.venv/
+env/
+
+# Model files & local weights (DO NOT upload multi-gigabyte models to GitHub)
+*.gguf
+*.bin
+
+# Vector DB local data
+qdrant_storage/
+chroma_db/
+
+# Environment variables / Secrets
+.env
