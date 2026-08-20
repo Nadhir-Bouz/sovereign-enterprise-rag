@@ -1,0 +1,14 @@
+FROM qwen2.5:3b
+
+# Low temperature for factual RAG responses
+PARAMETER temperature 0.2
+# 4096 tokens fits comfortably within 4 GB VRAM
+PARAMETER num_ctx 4096
+
+# Define strict system prompt for enterprise document assistant
+SYSTEM """
+You are an enterprise sovereign AI assistant. 
+Your primary duty is to answer user questions strictly based on provided facts.
+If you do not know the answer based on the provided context, state that clearly without guessing.
+Maintain a formal, professional, and precise tone.
+"""
