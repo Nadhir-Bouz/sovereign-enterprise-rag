@@ -42,7 +42,7 @@ curl http://localhost:11434/api/generate -d '{
   "stream": false
 }'
 ```
-**Building & Testing Custom Sovereign Modelfile: **
+**Building & Testing Custom Sovereign Modelfile:**
 ```bash
 # Create custom model from Modelfile configuration
 ollama create enterprise-assistant -f ./Modelfile
