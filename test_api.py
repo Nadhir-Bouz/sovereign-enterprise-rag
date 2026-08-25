@@ -16,7 +16,7 @@ response = requests.post(url, json=payload)
 
 if response.status_code == 200:
     data = response.json()
-    print("API Response Success! 🎉\n")
+    print("API Response Success!\n")
     print(data["message"]["content"])
 else:
     print(f"Error: {response.status_code} - {response.text}")
